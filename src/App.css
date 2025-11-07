@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "StarWars";
+  src: url("/public/StarWars.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  background-image: url("assets/bg.jpeg");
+  background-size: cover;
+  color: antiquewhite;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.titl{
+  font-family: 'StarWars', sans-serif;
+  position: relative;
+  left: 30%;
+  word-spacing: 7px;
+}
+#input-text{
+
+                    width: 15%;
+                    position: relative;
+  left: 40%;
+                    color: rgb(255, 255, 239);
+                    font-size: 16px;
+                    line-height: 20px;
+                    min-height: 28px;
+                    border-radius: 4px;
+                    padding: 8px 16px;
+                    border: 2px solid transparent;
+                    box-shadow: rgba(255, 255, 255, 0.568) 0px 1px 3px, rgba(255, 255, 255, 0.568) 0px 1px 4px;
+                    background: rgb(29, 64, 73);
+                    transition: all 0.1s ease 0s;                     
+}
+.butt{
+  
+                display: inline-block;
+                outline: 0;
+                cursor: pointer;
+                border: 1px solid #ffffff;
+                border-radius: 15px;
+                                    position: relative;
+top: 2px;
+  left: 41%;
+                color: #fff;
+                background: #000;
+                font-size: 17px;
+                font-weight: 600;
+                line-height: 20px;
+                padding: 6px 10px;
+                text-align:center;
+                transition-duration: .15s;
+                transition-property: all;
+                transition-timing-function: cubic-bezier(.4,0,.2,1);
+                    
+}
+.butt:hover{
+                    color: #130f0f;
+                    background: rgb(255, 218, 87);
+                    
+                }
+
+.loading {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+  color: #ffd700;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.error {
+  text-align: center;
+  font-size: 18px;
+  color: #ff6b6b;
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 107, 107, 0.1);
+  border: 2px solid #ff6b6b;
+  border-radius: 8px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.character-card {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(29, 64, 73, 0.6));
+  border: 2px solid #c9a961;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(201, 169, 97, 0.2),
+              0 0 15px rgba(201, 169, 97, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.5s ease-out;
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(201, 169, 97, 0.25),
+              0 0 20px rgba(201, 169, 97, 0.2);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.character-card h2 {
+  font-family: sans-serif;
+  font-size: 32px;
+  color: #d4af77;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px rgba(212, 175, 119, 0.3);
+}
+
+.character-card img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #c9a961;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.character-card img:hover {
+  transform: scale(1.05);
+}
+
+.character-card p {
+  font-size: 18px;
+  color: #faebd7;
+  margin: 12px 0;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.character-card p b {
+  color: #d4af77;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .titl {
+    font-size: 24px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    word-spacing: 3px;
+    padding: 0 10px;
+  }
+
+  #input-text {
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .butt {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    display: block;
+    width: auto;
+    min-width: 120px;
+  }
+
+  .character-card {
+    max-width: 90%;
+    padding: 20px;
+    margin: 30px auto;
+  }
+
+  .character-card h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .character-card img {
+    max-width: 300px;
+  }
+
+  .character-card p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .error {
+    max-width: 90%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .titl {
+    font-size: 18px;
+    word-spacing: 2px;
+    left: 0;
+    padding: 0 10px;
+  }
+
+  #input-text {
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 15px auto;
+  }
+
+  .butt {
+    font-size: 15px;
+    padding: 8px 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100px;
+  }
+
+  .character-card {
+    padding: 15px;
+  }
+
+  .character-card h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .character-card img {
+    max-width: 200px;
+  }
+
+  .character-card p {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
